@@ -309,7 +309,9 @@
 
   function firstMine(){ const m=S.posts.filter(p=>WITH_YOLANDA(p.status)).sort(byNum); return m.length?m[0].id:null; }
   function byFilm(a,b){ const x=a.filmBy||'9', y=b.filmBy||'9'; return x>y?1:x<y?-1:(a.n-b.n); }
-  function byNum(a,b){ return (a.n-b.n) || ((a.filmBy||'9')>(b.filmBy||'9')?1:-1); }
+  function wk(p){ const m=String(p.week||'').match(/d+/); return m?+m[0]:999; }
+  function byNum(a,b){ return (wk(a)-wk(b)) || (a.n-b.n) || ((a.filmBy||'9')>(b.filmBy||'9')?1:-1); }
+  function grouped(list){ const weeks=[...new Set(list.map(p=>p.week||''))]; if(weeks.length<2) return list.map(postCard).join(''); return weeks.map(w=>`<h4 style="margin:18px 0 8px;font-size:13px">${esc(w||'Other')}</h4>`+list.filter(p=>(p.week||'')===w).map(postCard).join('')).join(''); }
   function renderYolanda(){
     const c = S.config||{};
     const mine = S.posts.filter(p=>WITH_YOLANDA(p.status)).sort(byNum);
@@ -320,7 +322,7 @@
     return `
       ${renderCal('film')}
       <h2>To film <span style="color:var(--muted);font-size:15px;font-weight:500">· ${filmed} of ${S.posts.length} done</span></h2>
-      ${mine.length ? mine.map(postCard).join('') : `<div class="empty">Nothing on your list. ${esc(c.managerName||'Jacob')} will add the next batch.</div>`}
+      ${mine.length ? grouped(mine) : `<div class="empty">Nothing on your list. ${esc(c.managerName||'Jacob')} will add the next batch.</div>`}
       ${sent.length ? `<details class="panel" ${ui.open.__sent?'open':''} data-open="__sent"><summary><span class="ic">✓</span> Sent to ${esc(c.managerName||'Jacob')} (${sent.length}) <span class="arrow">▾</span></summary><div class="panel-body">${sent.map(postCard).join('')}</div></details>` : ''}
       <details class="panel" ${ui.open.__send?'open':''} data-open="__send"><summary><span class="ic">↑</span> How to send footage <span class="arrow">▾</span></summary><div class="panel-body">${link}<ol class="steps">${(S.delivery||[]).map((s,i)=>`<li><i>${i+1}</i><span>${esc(s)}</span></li>`).join('')}</ol></div></details>
       <details class="panel" ${ui.open.__film?'open':''} data-open="__film"><summary><span class="ic">▶</span> How to film (read once) <span class="arrow">▾</span></summary><div class="panel-body"><ul class="basics">${(S.basics||[]).map(b=>`<li><b>${esc(b.h)}</b><p>${esc(b.p)}</p></li>`).join('')}</ul></div></details>
