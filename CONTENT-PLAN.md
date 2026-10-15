@@ -38,12 +38,12 @@ Filming runs ahead of posting on purpose so Jacob builds a bank first.
 | # | Film by | Post on |
 |---|---|---|
 | 1 | Thu Oct 16 | Mon Oct 20 |
-| 2 | Mon Oct 19 | Mon Oct 27 |
+| 2 | Mon Oct 19 | Thu Nov 5 |
 | 3 | Wed Oct 21 | Thu Oct 30 |
 | 4 | Fri Oct 23 | Mon Nov 2 |
-| 5 | Fri Oct 17 | Thu Nov 5 |
+| 5 | Fri Oct 17 | Thu Oct 29 |
 
-After post 2, one post every 3 days.
+Posting order: 1, 5, 3, 4, 2.
 
 | # | Type | Title | Pillar | Draft caption (finish in her voice from the voice memo) |
 |---|---|---|---|---|
