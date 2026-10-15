@@ -41,7 +41,7 @@ Filming runs ahead of posting on purpose so Jacob builds a bank first.
 | 2 | Mon Oct 19 | Thu Nov 5 |
 | 3 | Wed Oct 21 | Thu Oct 30 |
 | 4 | Fri Oct 23 | Mon Nov 2 |
-| 5 | Fri Oct 17 | Thu Oct 29 |
+| 5 | Fri Oct 17 | Mon Oct 27 |
 
 Posting order: 1, 5, 3, 4, 2.
 

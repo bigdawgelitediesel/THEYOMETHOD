@@ -171,7 +171,7 @@
         "type": "Photo",
         "title": "Behind the scenes photo",
         "filmBy": "2026-10-17",
-        "postOn": "2026-10-29",
+        "postOn": "2026-10-27",
         "status": "todo",
         "shotsDone": {},
         "idea": "One real photo from while you're filming this week. Phone on the tripod, you on the mat, the living room the way it actually is. Nothing staged. Jacob posts it with a 'here's what this week looked like' caption.",
