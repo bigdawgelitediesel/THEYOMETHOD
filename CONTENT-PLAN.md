@@ -38,20 +38,20 @@ Filming runs ahead of posting on purpose so Jacob builds a bank first.
 | # | Film by | Post on |
 |---|---|---|
 | 1 | Thu Oct 16 | Mon Oct 20 |
-| 2 | Mon Oct 19 | Thu Nov 5 |
-| 3 | Wed Oct 21 | Thu Oct 30 |
+| 2 | Fri Oct 17 | Mon Oct 27 |
+| 3 | Wed Oct 21 | Fri Oct 30 |
 | 4 | Fri Oct 23 | Mon Nov 2 |
-| 5 | Fri Oct 17 | Mon Oct 27 |
+| 5 | Mon Oct 19 | Thu Nov 5 |
 
-Posting order: 1, 5, 3, 4, 2.
+Numbered in posting order.
 
 | # | Type | Title | Pillar | Draft caption (finish in her voice from the voice memo) |
 |---|---|---|---|---|
 | 1 | Reel | I'm giving this a shot | Her | "Mom of three. Never done this before. Giving it a shot anyway. If you've ever wanted to try Pilates, or you're just a mom who gets it, I'd love your support. Fort Collins, online anywhere." |
-| 2 | Reel | Do this with me: 60 seconds | Teach | "Get on the floor with me. Sixty seconds, no changing clothes. Send this to the friend who needs it." |
+| 2 | Photo | Behind the scenes photo | Her | "Week one of actually doing this. Phone on a tripod, boys in the next room. Here we go." |
 | 3 | Reel | 3 moves for a tired back | Teach | On-screen text format. Caption: "Three moves I give every mom with a tired back. Save this for tonight." |
 | 4 | Talking head | What Pilates actually did for me | Her | One take, no b-roll. Caption: "Nobody told me three kids would make me feel like a stranger in my own body. Here is what changed." |
-| 5 | Photo | Behind the scenes photo | Her | "Week one of actually doing this. Phone on a tripod, boys in the next room. Here we go." |
+| 5 | Reel | Do this with me: 60 seconds | Teach | "Get on the floor with me. Sixty seconds, no changing clothes. Send this to the friend who needs it." |
 
 Hashtags (keep to 5-8, local first): #fortcollins #fortcollinsfitness #nocomoms #pilatesinstructor #matpilates #pilatesformoms #coloradomoms #fortcollinspilates
 
