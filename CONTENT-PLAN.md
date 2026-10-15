@@ -18,7 +18,7 @@ Success looks like: local women in Fort Collins / NoCo DMing to book, online cli
 | **Grid** | Photo carousels, portraits | Makes the profile look like a real brand when someone lands on it. |
 | **Tease** | Hints about what's coming (the show, new offerings) | Keeps people watching. Use sparingly. |
 
-Default weekly mix: 2 Her, 1 Teach, 1 Show, 1 Grid. Swap a Her for a Tease when there is something to tease.
+Default weekly mix: 2 Her, 2 Teach, 1 Grid (Show when there is real class footage). Swap a Her for a Tease when there is something to tease.
 
 ## Weekly rhythm
 
@@ -48,10 +48,10 @@ Wednesday Oct 21 is her day off. After post 2, one post every 3 days.
 | # | Type | Title | Pillar | Draft caption (finish in her voice from the voice memo) |
 |---|---|---|---|---|
 | 1 | Reel | I'm giving this a shot | Her | "Mom of three. Never done this before. Giving it a shot anyway. If you've ever wanted to try Pilates, or you're just a mom who gets it, I'd love your support. Fort Collins, online anywhere." |
-| 2 | Reel | What class actually looks like | Show | "This is what we do. No mirrors, no competition, just an hour that's yours. Fort Collins, link in bio." |
-| 3 | Reel | 3 moves for a tired back | Teach | "Three moves I give every mom with a tired back. Save it for tonight after they're in bed." |
-| 4 | Reel | A day in the life | Her | Voiceover from her memo. Caption: "Three boys and a Pilates business. Here's a Tuesday." |
-| 5 | Carousel | Photo set | Grid | "Hi. I'm Yolanda. I teach Pilates in Fort Collins and I have three boys who think it's just stretching. Swipe." |
+| 2 | Reel | Do this with me: 60 seconds | Teach | "Get on the floor with me. Sixty seconds, no changing clothes. Send this to the friend who needs it." |
+| 3 | Reel | 3 moves for a tired back | Teach | On-screen text format. Caption: "Three moves I give every mom with a tired back. Save this for tonight." |
+| 4 | Talking head | What Pilates actually did for me | Her | One take, no b-roll. Caption: "Nobody told me three kids would make me feel like a stranger in my own body. Here is what changed." |
+| 5 | Photo | Behind the scenes photo | Her | "Week one of actually doing this. Phone on a tripod, boys in the next room. Here we go." |
 
 Hashtags (keep to 5-8, local first): #fortcollins #fortcollinsfitness #nocomoms #pilatesinstructor #matpilates #pilatesformoms #coloradomoms #fortcollinspilates
 
