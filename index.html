@@ -307,11 +307,12 @@
       </div>${actions}</article>`;
   }
 
-  function firstMine(){ const m=S.posts.filter(p=>WITH_YOLANDA(p.status)).sort(byFilm); return m.length?m[0].id:null; }
+  function firstMine(){ const m=S.posts.filter(p=>WITH_YOLANDA(p.status)).sort(byNum); return m.length?m[0].id:null; }
   function byFilm(a,b){ const x=a.filmBy||'9', y=b.filmBy||'9'; return x>y?1:x<y?-1:(a.n-b.n); }
+  function byNum(a,b){ return (a.n-b.n) || ((a.filmBy||'9')>(b.filmBy||'9')?1:-1); }
   function renderYolanda(){
     const c = S.config||{};
-    const mine = S.posts.filter(p=>WITH_YOLANDA(p.status)).sort(byFilm);
+    const mine = S.posts.filter(p=>WITH_YOLANDA(p.status)).sort(byNum);
     const sent = S.posts.filter(p=>!WITH_YOLANDA(p.status)).sort((a,b)=>(b.sentAt||'')>(a.sentAt||'')?1:-1);
     const filmed = S.posts.filter(p=>p.status!=='todo').length;
     const link = c.deliveryLink ? `<a class="link-btn" href="${esc(c.deliveryLink)}" target="_blank" rel="noopener">Open the ${esc(c.deliveryMethod||'shared')} folder</a>` : `<span class="link-missing">${esc(c.deliveryMethod||'Shared')} folder link coming from ${esc(c.managerName||'Jacob')}. Until then, AirDrop or text the files.</span>`;
@@ -383,7 +384,7 @@
 
       <h2>With Yolanda (${withHer.length}) <button class="sm primary" id="newPost" style="float:right">+ New post</button></h2>
       ${formHtml}
-      ${withHer.length?`<div class="card">${withHer.sort(byFilm).map(queueRow).join('')}</div>`:'<div class="empty">Her list is empty. Add posts above.</div>'}
+      ${withHer.length?`<div class="card">${withHer.sort(byNum).map(queueRow).join('')}</div>`:'<div class="empty">Her list is empty. Add posts above.</div>'}
 
       <details class="panel" data-open="__settings" ${ui.open.__settings?'open':''}><summary><span class="ic">⚙</span> Settings <span class="arrow">▾</span></summary><div class="panel-body">
         <form class="form" id="cfgForm">
