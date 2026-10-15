@@ -90,7 +90,7 @@
       {
         "id": "w1p2",
         "week": "Week 1",
-        "n": 2,
+        "n": 5,
         "type": "Reel",
         "title": "Do this with me: 60 seconds",
         "filmBy": "2026-10-19",
@@ -167,7 +167,7 @@
       {
         "id": "w1p5",
         "week": "Week 1",
-        "n": 5,
+        "n": 2,
         "type": "Photo",
         "title": "Behind the scenes photo",
         "filmBy": "2026-10-17",
@@ -186,6 +186,134 @@
           "Phone photos. No filter, no editing."
         ],
         "send": "The 10-15 photos, originals."
+      },
+      {
+        "id": "pmv9rekh4",
+        "week": "Week 2",
+        "n": 1,
+        "type": "Talking head",
+        "title": "Why I named it The Yo Method",
+        "filmBy": "2026-10-26",
+        "postOn": "2026-11-08",
+        "status": "todo",
+        "shotsDone": {},
+        "idea": "Just you and the camera. Where the name came from, what it means, and what you want someone to feel when they walk out of your class. This one lets people in on the business without it feeling like an ad.",
+        "length": "Final 30-60 sec. Film 3 takes, 1-2 minutes each.",
+        "script": [
+          "Open straight in: \"People ask me why it's called The Yo Method. Honestly, ...\" then the real answer. Your nickname, your name, a joke someone made, whatever it actually was.",
+          "What the 'method' part means to you in one or two sentences. Not a list of principles. What's different about an hour with you.",
+          "One real moment: a client or a friend who said something after a class that stuck with you.",
+          "Close: \"That's the Yo Method. Come try it.\""
+        ],
+        "shots": [
+          "Back camera on a tripod or shelf, lens at eye level, you looking into the lens.",
+          "Window light on your face, quiet room, nothing moving behind you. Your home studio is perfect for this.",
+          "Three full takes. Keep rolling through stumbles."
+        ],
+        "send": "All 3 takes, originals."
+      },
+      {
+        "id": "pmv9reksi",
+        "week": "Week 2",
+        "n": 2,
+        "type": "Reel",
+        "title": "Stop doing crunches, do this",
+        "filmBy": "2026-10-27",
+        "postOn": "2026-11-11",
+        "status": "todo",
+        "shotsDone": {},
+        "idea": "One swap. The thing everyone does wrong, then the thing you'd have them do instead. Two clips, on-screen text does the talking. These get saved and sent to husbands.",
+        "length": "Final reel 10-20 sec. Film two clips, 20 sec each.",
+        "script": [
+          "No talking required. Jacob adds the text: 'Stop doing this' over clip 1, 'Do this instead' over clip 2.",
+          "Optional: say one line to camera at the end, \"Your neck will thank you.\" (3 sec)"
+        ],
+        "shots": [
+          "Clip 1, the WRONG way: a regular crunch, exaggerated a little. Neck pulling, fast, sloppy. 4-5 reps, side angle, full body (20 sec).",
+          "Clip 2, the RIGHT way: your swap. Slow, clean, 4-5 reps, same angle, same spot (20 sec).",
+          "Hold the hardest point of the right version still for 3 seconds at the end (cover photo).",
+          "Phone on a tripod at hip height, side angle, plain background, window light. Same spot for both clips."
+        ],
+        "send": "Both clips, labeled Wrong / Right."
+      },
+      {
+        "id": "pmv9rel0d",
+        "week": "Week 2",
+        "n": 3,
+        "type": "Reel",
+        "title": "Come see my home studio",
+        "filmBy": "2026-10-29",
+        "postOn": "2026-11-14",
+        "status": "todo",
+        "shotsDone": {},
+        "idea": "A quick walk-through of where you teach and film. Not a tour of a fancy studio. The real space: mat, props, window, the dog, the door the boys keep opening. People book with someone whose space they can picture.",
+        "length": "Final reel 15-30 sec. Film 8-10 clips, 5-8 sec each.",
+        "script": [
+          "Optional one line to camera at the start: \"This is where it all happens.\" (3 sec)",
+          "Rest is no talking. Music over it. Or record a 20-second voice memo walking through it and Jacob uses it as voiceover."
+        ],
+        "shots": [
+          "Walking in through the door, phone held at chest height, steady (8 sec).",
+          "Slow pan across the room from one corner (8 sec).",
+          "The mat going down or already down, low angle from the floor (5 sec).",
+          "Props: ring, band, ball, blocks, whatever you use, close up (5 sec).",
+          "The window and the light coming in (5 sec).",
+          "The dog, wherever the dog actually is (5 sec).",
+          "You sitting down on the mat, from the front (8 sec).",
+          "One move, side angle, full body, in the space (8 sec).",
+          "Something real: the boys' shoes, a water bottle, the laundry basket in the corner (5 sec).",
+          "Closing shot: you on the mat looking at the camera, or the dog walking out (5 sec)."
+        ],
+        "send": "All clips, originals. Voice memo if you did one."
+      },
+      {
+        "id": "pmv9rel8j",
+        "week": "Week 2",
+        "n": 4,
+        "type": "Reel",
+        "title": "Working on something I can't talk about yet",
+        "filmBy": "2026-10-30",
+        "postOn": "2026-11-17",
+        "status": "todo",
+        "shotsDone": {},
+        "idea": "The first tease. You say almost nothing. The point is the question in the comments. Do NOT say what it is, who it's with, or when. Keep it to 'something is happening.'",
+        "length": "Final reel 10-20 sec. Film 3 takes, 20-30 sec each.",
+        "script": [
+          "To camera, one line, a little smile: \"So... I signed something this week that I can't talk about yet.\"",
+          "Beat. Then: \"But it's big. And it's not just Pilates. That's all I can say.\"",
+          "Close: \"Follow along, I'll tell you when I can.\"",
+          "Nothing else. No hints about TV, no hints about who. If a take gets too specific, do it again."
+        ],
+        "shots": [
+          "Back camera, lens at eye level, you looking into the lens. Home studio or the kitchen.",
+          "Three takes. Try one sitting on the mat, one standing, one in the car with the engine off.",
+          "Optional b-roll: you signing or holding papers with the text NOT visible, 5 sec."
+        ],
+        "send": "All takes, originals."
+      },
+      {
+        "id": "pmv9relgn",
+        "week": "Week 2",
+        "n": 5,
+        "type": "Photo",
+        "title": "Home studio photo with the dog",
+        "filmBy": "2026-10-31",
+        "postOn": "2026-11-20",
+        "status": "todo",
+        "shotsDone": {},
+        "idea": "One real photo in your home studio with your dog. Natural light, nothing staged. This is the one that gets the most comments of the whole month, because dog.",
+        "length": "1 post, 1-3 photos. Take 15-20 so we can pick.",
+        "script": [
+          "Nothing to say. Text Jacob the dog's name and one line about them for the caption."
+        ],
+        "shots": [
+          "You sitting on the mat, dog next to you or in your lap, both looking at the camera (5 shots).",
+          "You in a move, dog doing whatever the dog does, usually lying on the mat (5 shots).",
+          "Candid: you laughing at the dog, not looking at the camera (5 shots).",
+          "One of just the dog on the mat (3 shots).",
+          "Window light, phone at your eye level, someone else takes it or use the 10-second timer. No filter."
+        ],
+        "send": "All of them, originals."
       }
     ],
     log: []

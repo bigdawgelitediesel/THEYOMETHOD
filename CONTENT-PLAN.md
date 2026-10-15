@@ -55,16 +55,28 @@ Numbered in posting order.
 
 Hashtags (keep to 5-8, local first): #fortcollins #fortcollinsfitness #nocomoms #pilatesinstructor #matpilates #pilatesformoms #coloradomoms #fortcollinspilates
 
-## Week 2 ideas (pick 5)
+## Week 2 (film Oct 26 - Nov 1)
 
-- Her: "Why I named it The Yo Method" talking head
+| # | Type | Title | Pillar | Film by | Post on | Caption draft |
+|---|---|---|---|---|---|---|
+| 1 | Talking head | Why I named it The Yo Method | Her | Mon Oct 26 | Sun Nov 8 | "People ask where the name came from. Here's the real answer." |
+| 2 | Reel | Stop doing crunches, do this | Teach | Tue Oct 27 | Wed Nov 11 | "Stop doing this. Do this instead. Your neck will thank you. Send it to someone who crunches." |
+| 3 | Reel | Come see my home studio | Show | Thu Oct 29 | Sat Nov 14 | "This is where it all happens. Mat, window, dog, and a door the boys keep opening." |
+| 4 | Reel | Working on something I can't talk about yet | Tease | Fri Oct 30 | Tue Nov 17 | "I signed something this week. That's all I can say for now." |
+| 5 | Photo | Home studio photo with the dog | Grid | Sat Oct 31 | Fri Nov 20 | "Studio assistant. Does not take corrections." (swap in the dog's name) |
+
+Rejected for week 2: "Things my boys say about Pilates" (Jacob passed).
+
+## Week 3 ideas (pick 5)
+
 - Her: Sunday reset / meal prep with the boys
-- Teach: "Stop doing crunches, do this" (one swap)
 - Teach: 60-second morning flow, follow along
+- Teach: "Do this in the pickup line" seated moves in the car
 - Show: private session clip with a client testimonial (needs client permission)
 - Show: online session, what the setup looks like from her side
 - Grid: carousel of 3 client transformations in words, not photos
-- Tease: "I signed something this week I can't talk about yet" story + reel
+- Her: the first class she ever taught, story to camera
+
 
 ## Rules
 
