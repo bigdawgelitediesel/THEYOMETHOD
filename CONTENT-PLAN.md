@@ -36,7 +36,7 @@ Posting times to start: 6:00 am and 7:30 pm Mountain. Adjust after 3 weeks of da
 
 | # | Type | Title | Pillar | Draft caption (finish in her voice from the voice memo) |
 |---|---|---|---|---|
-| 1 | Reel | Meet Yolanda | Her | "Stay-at-home mom for ___ years. Three boys. Then Pilates. Now I teach it. If you've been thinking about starting, this is your sign. Classes in Fort Collins, online anywhere, privates when you need one." |
+| 1 | Reel | I'm giving this a shot | Her | "Mom of three. Never done this before. Giving it a shot anyway. If you've ever wanted to try Pilates, or you're just a mom who gets it, I'd love your support. Fort Collins, online anywhere." |
 | 2 | Reel | What class actually looks like | Show | "This is what we do. No mirrors, no competition, just an hour that's yours. Fort Collins, link in bio." |
 | 3 | Reel | 3 moves for a tired back | Teach | "Three moves I give every mom with a tired back. Save it for tonight after they're in bed." |
 | 4 | Reel | A day in the life | Her | Voiceover from her memo. Caption: "Three boys and a Pilates business. Here's a Tuesday." |
@@ -65,6 +65,6 @@ Hashtags (keep to 5-8, local first): #fortcollins #fortcollinsfitness #nocomoms 
 
 ## Links
 
-- Live filming list: https://bigdawgelitediesel.github.io/THEYOMETHOD/
+- Live dashboard: https://theyomethod.vercel.app/ (Jacob side: tap "Jacob", enter PIN)
 - Repo: https://github.com/bigdawgelitediesel/THEYOMETHOD
 - Instagram: @yolandbrimhallulibarri

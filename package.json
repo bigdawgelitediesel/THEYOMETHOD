@@ -1,0 +1,10 @@
+{
+  "name": "theyomethod",
+  "private": true,
+  "version": "1.0.0",
+  "description": "The Yo Method social media dashboard (Yolanda + Jacob)",
+  "dependencies": {
+    "@vercel/blob": "^2.0.0"
+  },
+  "engines": { "node": "22.x" }
+}
