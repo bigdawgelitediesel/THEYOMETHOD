@@ -24,15 +24,26 @@ Default weekly mix: 2 Her, 1 Teach, 1 Show, 1 Grid. Swap a Her for a Tease when 
 
 | Day | Who | What |
 |---|---|---|
-| Mon | Jacob | Add next week to `content.js`, push. Text Yolanda "list is up." |
-| Mon-Sun | Yolanda | Films. Checks off on the site. Uploads to Drive. Taps Sent. |
-| Sun night | Yolanda | Everything uploaded by Sunday. |
-| Mon-Tue | Jacob | Edit, caption, schedule the 5 posts for Tue-Sat. |
+| Mon | Jacob | Add next week's posts with "+ New post" on the Jacob side. Text Yolanda "list is up." |
+| Mon-Fri | Yolanda | Films per the calendar (Wednesdays off). Checks off on the site. Uploads to Drive. Taps Sent. |
+| As they land | Jacob | Edit, caption, bank them. Post every 3 days from the bank. |
 | Daily | Jacob | Post stories from whatever raw clips she sent. Reply to comments / DMs within the day. |
 
-Posting times to start: 6:00 am and 7:30 pm Mountain. Adjust after 3 weeks of data.
+Posting cadence: one post every 3 days once the bank is built. Posting time to start: 7:30 pm Mountain. Adjust after 3 weeks of data.
 
-## Week 1 (film by Sun Oct 19, post Oct 20-24)
+## Week 1
+
+Filming runs ahead of posting on purpose so Jacob builds a bank first.
+
+| # | Film by | Post on |
+|---|---|---|
+| 1 | Thu Oct 16 | Mon Oct 20 |
+| 2 | Mon Oct 19 | Mon Oct 27 |
+| 3 | Tue Oct 20 | Thu Oct 30 |
+| 4 | Thu Oct 22 | Mon Nov 2 |
+| 5 | Fri Oct 23 | Thu Nov 5 |
+
+Wednesday Oct 21 is her day off. After post 2, one post every 3 days.
 
 | # | Type | Title | Pillar | Draft caption (finish in her voice from the voice memo) |
 |---|---|---|---|---|

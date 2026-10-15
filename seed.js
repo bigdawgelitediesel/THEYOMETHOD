@@ -59,7 +59,7 @@
     posts: [
       {
         id: "w1p1", week: "Week 1", n: 1, type: "Reel", title: "I'm giving this a shot",
-        filmBy: "2026-10-16", postOn: "2026-10-21", status: "todo", shotsDone: {},
+        filmBy: "2026-10-16", postOn: "2026-10-20", status: "todo", shotsDone: {},
         idea: "NOT a 'hi, I'm Yolanda, I teach Pilates' intro. This is you being honest: you're a mom of three, you've never done the social media thing, you're going to try it, and you'd love people to come along. Nervous is good. Laughing at yourself is good. People support someone who is trying, not someone who is polished.",
         length: "Final reel 30-45 sec. Film 1-2 minutes of talking plus b-roll.",
         script: [
@@ -82,7 +82,7 @@
       },
       {
         id: "w1p2", week: "Week 1", n: 2, type: "Reel", title: "What class actually looks like",
-        filmBy: "2026-10-17", postOn: "2026-10-24", status: "todo", shotsDone: {},
+        filmBy: "2026-10-19", postOn: "2026-10-27", status: "todo", shotsDone: {},
         idea: "No talking. Pure movement footage set to music. Shows the vibe, the space, and that you know what you are doing. If students are in frame, ask them first or shoot from behind / below the shoulders.",
         length: "Final reel 15-30 sec. Film 10-12 clips, 5-8 sec each.",
         script: [
@@ -105,7 +105,7 @@
       },
       {
         id: "w1p3", week: "Week 1", n: 3, type: "Reel", title: "3 moves for a tired back",
-        filmBy: "2026-10-18", postOn: "2026-10-23", status: "todo", shotsDone: {},
+        filmBy: "2026-10-20", postOn: "2026-10-30", status: "todo", shotsDone: {},
         idea: "A quick tutorial. Pick three moves you would give a mom who has been carrying kids and sitting in the pickup line all day. These posts get saved and shared, which is how new people find you.",
         length: "Final reel 30-45 sec. Film each move 15-20 sec plus a short intro line.",
         script: [
@@ -124,7 +124,7 @@
       },
       {
         id: "w1p4", week: "Week 1", n: 4, type: "Reel", title: "A day in the life",
-        filmBy: "2026-10-16", postOn: "2026-10-25", status: "todo", shotsDone: {},
+        filmBy: "2026-10-22", postOn: "2026-11-02", status: "todo", shotsDone: {},
         idea: "Mom of three boys who runs a Pilates business. People follow people, not businesses. This is the post that makes them like you. Film small moments all day, 3-5 seconds each. Do not stage it. Pick any weekday this week.",
         length: "Final reel 20-40 sec. Film 15-20 clips across one full day.",
         script: [
@@ -151,7 +151,7 @@
       },
       {
         id: "w1p5", week: "Week 1", n: 5, type: "Photo carousel", title: "Photo set for the grid",
-        filmBy: "2026-10-19", postOn: "2026-10-22", status: "todo", shotsDone: {},
+        filmBy: "2026-10-23", postOn: "2026-11-05", status: "todo", shotsDone: {},
         idea: "Still photos. One post for the feed that looks sharp when someone lands on your profile, plus Jacob gets a bank of photos for the bio, stories, and future posts. Natural light. Someone else holds the phone for most of these.",
         length: "Final post 6-8 photos. Take 40-60 so we can pick.",
         script: [ "Nothing to say. Smile in a couple, not in the rest." ],
