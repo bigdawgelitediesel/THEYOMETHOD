@@ -17,7 +17,7 @@
     config: {
       managerName: "Jacob",
       deliveryMethod: "Google Drive",
-      deliveryLink: "",
+      deliveryLink: "https://drive.google.com/drive/folders/1B7q56LuhtMBnaRDHi-bUINoah-4yLy8N",
       footer: "Questions? Text Jacob. Film first, ask second. Raw and real beats perfect."
     },
     basics: [
