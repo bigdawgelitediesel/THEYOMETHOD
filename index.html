@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Yo Method · Filming List</title>
+<meta name="description" content="Weekly filming checklist for The Yo Method Instagram.">
+<meta name="theme-color" content="#f6f1ea">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23b86a4f'/%3E%3Ctext x='32' y='42' font-size='30' text-anchor='middle' fill='%23f6f1ea' font-family='Georgia'%3EYo%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f1ea; --paper:#fffdf9; --ink:#2b2520; --muted:#6f655c;
+    --line:#e6ddd2; --accent:#b86a4f; --accent-ink:#fff; --sage:#8a9a7b; --sage-soft:#e9eee3;
+    --done:#4f7a5a; --done-soft:#e3efe6; --shadow:0 1px 2px rgba(43,37,32,.06),0 8px 24px rgba(43,37,32,.06);
+    --r:16px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;font-size:16px;line-height:1.5;padding-bottom:40px}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 16px}
+
+  header{padding:28px 0 12px}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:30px;letter-spacing:-.01em;line-height:1.1;margin:0}
+  .brand span{color:var(--accent)}
+  .sub{color:var(--muted);margin:6px 0 0;font-size:15px}
+
+  .tabs{display:flex;gap:8px;overflow-x:auto;padding:14px 0 6px;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:0 0 auto;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:9px 14px;border-radius:999px;font:inherit;font-weight:500;font-size:14px;cursor:pointer}
+  .tab[aria-selected="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+  .week-head{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin:10px 0 18px;box-shadow:var(--shadow)}
+  .week-head h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:22px;margin:0 0 4px}
+  .meta{display:flex;flex-wrap:wrap;gap:6px 14px;color:var(--muted);font-size:14px;margin:4px 0 10px}
+  .meta b{color:var(--ink);font-weight:600}
+  .week-head p{margin:0 0 12px}
+  .prog{height:10px;background:var(--line);border-radius:999px;overflow:hidden}
+  .prog i{display:block;height:100%;background:var(--done);width:0;transition:width .3s}
+  .prog-label{font-size:13px;color:var(--muted);margin-top:6px}
+
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);margin:0 0 14px;box-shadow:var(--shadow);overflow:hidden}
+  .card.done{border-color:#c9dccd}
+  .card-head{display:flex;align-items:flex-start;gap:12px;padding:16px 16px 10px;cursor:pointer}
+  .num{flex:0 0 40px;height:40px;border-radius:12px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-family:Fraunces,Georgia,serif;font-size:20px;font-weight:600}
+  .card.done .num{background:var(--done)}
+  .card-title{flex:1;min-width:0}
+  .card-title h3{margin:0;font-size:18px;font-weight:700;line-height:1.25}
+  .badge{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--sage);background:var(--sage-soft);padding:2px 8px;border-radius:6px;margin-top:4px}
+  .chev{flex:0 0 auto;color:var(--muted);transition:transform .2s;margin-top:8px}
+  .card.open .chev{transform:rotate(180deg)}
+  .card-body{display:none;padding:0 16px 16px}
+  .card.open .card-body{display:block}
+  .idea{margin:0 0 12px;color:var(--ink)}
+  .spec{font-size:14px;color:var(--muted);background:var(--bg);border-radius:10px;padding:8px 12px;margin:0 0 14px}
+  h4{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:14px 0 6px}
+  ol,ul{margin:0;padding-left:0;list-style:none}
+  .shots li{display:flex;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+  .shots li:first-child{border-top:0}
+  .shots li input{flex:0 0 22px;width:22px;height:22px;margin:1px 0 0;accent-color:var(--done)}
+  .shots li label{flex:1;cursor:pointer}
+  .shots li.checked label{color:var(--muted);text-decoration:line-through}
+  .say li{padding:6px 0 6px 18px;position:relative}
+  .say li::before{content:"“";position:absolute;left:0;top:2px;color:var(--accent);font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1}
+  .send{font-size:14px;background:var(--sage-soft);border-radius:10px;padding:10px 12px;margin-top:12px}
+
+  .actions{display:flex;gap:10px;padding:12px 16px 16px;border-top:1px solid var(--line);background:#fcfaf6}
+  .btn{flex:1;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:12px;padding:12px;font:inherit;font-weight:700;font-size:15px;cursor:pointer}
+  .btn.on{background:var(--done);border-color:var(--done);color:#fff}
+
+  .panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);margin:22px 0 0;box-shadow:var(--shadow);overflow:hidden}
+  .panel summary{list-style:none;cursor:pointer;padding:16px;font-weight:700;font-size:17px;display:flex;align-items:center;gap:10px}
+  .panel summary::-webkit-details-marker{display:none}
+  .panel summary .ic{width:34px;height:34px;border-radius:10px;background:var(--sage-soft);color:var(--sage);display:grid;place-items:center;flex:0 0 auto}
+  .panel summary .arrow{margin-left:auto;color:var(--muted);transition:transform .2s}
+  .panel[open] summary .arrow{transform:rotate(180deg)}
+  .panel-body{padding:0 16px 16px}
+  .basics li{padding:10px 0;border-top:1px solid var(--line)}
+  .basics li:first-child{border-top:0}
+  .basics b{display:block;margin-bottom:2px}
+  .basics p{margin:0;color:var(--muted);font-size:15px}
+  .steps li{display:flex;gap:10px;padding:7px 0}
+  .steps li i{flex:0 0 24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;font-style:normal;font-size:13px;font-weight:700;display:grid;place-items:center}
+  .qs li{display:flex;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+  .qs li:first-child{border-top:0}
+  .qs li i{flex:0 0 24px;height:24px;border-radius:50%;background:var(--sage);color:#fff;font-style:normal;font-size:13px;font-weight:700;display:grid;place-items:center}
+  .link-btn{display:inline-block;margin:6px 0 12px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:11px 16px;border-radius:12px}
+  .link-missing{display:inline-block;margin:6px 0 12px;color:var(--muted);font-size:14px;background:var(--bg);padding:9px 12px;border-radius:10px}
+
+  footer{color:var(--muted);font-size:14px;text-align:center;padding:30px 0 0}
+  .bonus{margin-top:6px}
+  .bonus li{padding:7px 0 7px 18px;position:relative;color:var(--ink)}
+  .bonus li::before{content:"+";position:absolute;left:0;color:var(--accent);font-weight:700}
+  @media (min-width:600px){ .brand{font-size:36px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1 class="brand">The <span>Yo</span> Method</h1>
+    <p class="sub">Your filming list. Open on your phone, film it, check it off, send it.</p>
+  </header>
+
+  <div class="tabs" id="tabs" role="tablist"></div>
+
+  <section id="week"></section>
+
+  <details class="panel" id="sendPanel">
+    <summary><span class="ic">↑</span> How to send footage <span class="arrow">▾</span></summary>
+    <div class="panel-body" id="sendBody"></div>
+  </details>
+
+  <details class="panel">
+    <summary><span class="ic">▶</span> How to film (read once) <span class="arrow">▾</span></summary>
+    <div class="panel-body"><ul class="basics" id="basics"></ul></div>
+  </details>
+
+  <details class="panel" id="memoPanel">
+    <summary><span class="ic">●</span> <span id="memoTitle">One time: voice memo</span> <span class="arrow">▾</span></summary>
+    <div class="panel-body" id="memoBody"></div>
+  </details>
+
+  <footer id="foot"></footer>
+</div>
+
+<script src="content.js"></script>
+<script>
+(function(){
+  const C = window.CONTENT;
+  const KEY = 'yomethod-v1';
+  let state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch(e){ state = {}; }
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
+  function get(k){ return !!state[k]; }
+  function set(k,v){ state[k]=v; save(); }
+  function esc(s){ return String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+  const weeks = C.weeks;
+  let cur = weeks.length-1;
+  try { const h = location.hash.replace('#',''); const i = weeks.findIndex(w=>w.id===h); if(i>=0) cur=i; } catch(e){}
+
+  function renderTabs(){
+    const t = document.getElementById('tabs');
+    t.innerHTML = weeks.map((w,i)=>`<button class="tab" role="tab" aria-selected="${i===cur}" data-i="${i}">${esc(w.label)}</button>`).join('');
+    t.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{ cur=+b.dataset.i; location.hash=weeks[cur].id; render(); });
+    if(weeks.length<2) t.style.display='none';
+  }
+
+  function postDone(w,p){ return get(`${w.id}:${p.n}:filmed`) && get(`${w.id}:${p.n}:sent`); }
+
+  function renderWeek(){
+    const w = weeks[cur];
+    const doneCount = w.posts.filter(p=>postDone(w,p)).length;
+    const pct = Math.round(doneCount / w.posts.length * 100);
+    let html = `
+      <div class="week-head">
+        <h2>${esc(w.label)}</h2>
+        <div class="meta"><span>Film by <b>${esc(w.filmBy)}</b></span><span>Posts go up <b>${esc(w.postWeek)}</b></span></div>
+        <p>${esc(w.intro)}</p>
+        <div class="prog"><i style="width:${pct}%"></i></div>
+        <div class="prog-label">${doneCount} of ${w.posts.length} posts filmed and sent</div>
+      </div>`;
+
+    html += w.posts.map(p=>{
+      const k = `${w.id}:${p.n}`;
+      const filmed = get(k+':filmed'), sent = get(k+':sent');
+      const open = get(k+':open') || (!filmed && !sent && p.n===firstOpen(w));
+      const shots = p.shots.map((s,i)=>{
+        const sk = `${k}:shot:${i}`; const on = get(sk);
+        return `<li class="${on?'checked':''}"><input type="checkbox" id="${sk}" data-k="${sk}" ${on?'checked':''}><label for="${sk}">${esc(s)}</label></li>`;
+      }).join('');
+      const say = p.say.map(s=>`<li>${esc(s)}</li>`).join('');
+      return `
+      <article class="card ${open?'open':''} ${filmed&&sent?'done':''}" data-k="${k}">
+        <div class="card-head" data-toggle="${k}">
+          <div class="num">${p.n}</div>
+          <div class="card-title"><h3>${esc(p.title)}</h3><span class="badge">${esc(p.type)}</span></div>
+          <div class="chev">▾</div>
+        </div>
+        <div class="card-body">
+          <p class="idea">${esc(p.idea)}</p>
+          <div class="spec">${esc(p.length)}</div>
+          <h4>Film this</h4>
+          <ol class="shots">${shots}</ol>
+          <h4>Say this</h4>
+          <ul class="say">${say}</ul>
+          <div class="send"><b>Send:</b> ${esc(p.send)}</div>
+        </div>
+        <div class="actions">
+          <button class="btn ${filmed?'on':''}" data-flag="${k}:filmed">${filmed?'✓ Filmed':'Filmed'}</button>
+          <button class="btn ${sent?'on':''}" data-flag="${k}:sent">${sent?'✓ Sent':'Sent'}</button>
+        </div>
+      </article>`;
+    }).join('');
+
+    if (w.bonus) {
+      html += `<div class="week-head" style="margin-top:4px"><h2 style="font-size:18px">${esc(w.bonus.title)}</h2><ul class="bonus">${w.bonus.items.map(i=>`<li>${esc(i)}</li>`).join('')}</ul></div>`;
+    }
+
+    const el = document.getElementById('week');
+    el.innerHTML = html;
+
+    el.querySelectorAll('[data-toggle]').forEach(h=>h.onclick=()=>{
+      const k=h.dataset.toggle; const card=h.closest('.card'); const now=!card.classList.contains('open');
+      card.classList.toggle('open', now); set(k+':open', now);
+    });
+    el.querySelectorAll('input[type=checkbox]').forEach(c=>c.onchange=()=>{ set(c.dataset.k, c.checked); c.closest('li').classList.toggle('checked', c.checked); });
+    el.querySelectorAll('[data-flag]').forEach(b=>b.onclick=()=>{ set(b.dataset.flag, !get(b.dataset.flag)); render(); });
+  }
+  function firstOpen(w){ const p = w.posts.find(p=>!postDone(w,p)); return p?p.n:-1; }
+
+  function renderStatic(){
+    const d = C.delivery;
+    const link = d.link ? `<a class="link-btn" href="${esc(d.link)}" target="_blank" rel="noopener">Open the ${esc(d.method)} folder</a>` : `<span class="link-missing">${esc(d.method)} folder link coming from Jacob. Until then, AirDrop or text the files.</span>`;
+    document.getElementById('sendBody').innerHTML = link + `<ol class="steps">${d.steps.map((s,i)=>`<li><i>${i+1}</i><span>${esc(s)}</span></li>`).join('')}</ol>`;
+    document.getElementById('basics').innerHTML = C.basics.map(b=>`<li><b>${esc(b.h)}</b><p>${esc(b.p)}</p></li>`).join('');
+    const o = C.onboarding;
+    document.getElementById('memoTitle').textContent = o.title;
+    const mk = 'onboarding:sent';
+    document.getElementById('memoBody').innerHTML = `<p style="margin:0 0 10px">${esc(o.why)}</p><ol class="qs">${o.questions.map((q,i)=>`<li><i>${i+1}</i><span>${esc(q)}</span></li>`).join('')}</ol>
+      <div class="actions" style="padding:14px 0 0;border:0;background:none"><button class="btn ${get(mk)?'on':''}" id="memoBtn">${get(mk)?'✓ Voice memo sent':'Voice memo sent'}</button></div>`;
+    document.getElementById('memoBtn').onclick=()=>{ set(mk,!get(mk)); renderStatic(); };
+    document.getElementById('foot').textContent = C.manager.note;
+  }
+
+  function render(){ renderTabs(); renderWeek(); }
+  render(); renderStatic();
+})();
+</script>
+</body>
+</html>
