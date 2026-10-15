@@ -67,6 +67,10 @@ Hashtags (keep to 5-8, local first): #fortcollins #fortcollinsfitness #nocomoms 
 
 Rejected for week 2: "Things my boys say about Pilates" (Jacob passed).
 
+## Week 5 (film ~Nov 16-22): Thanksgiving
+
+Jacob's standing ask: week 5 includes a Thanksgiving / thankful post, films of some sort. Thanksgiving is Thu Nov 26. This one jumps the bank and goes live Nov 25 or 26, it does not wait its turn in the every-3-days queue.
+
 ## Week 3 ideas (pick 5)
 
 - Her: Sunday reset / meal prep with the boys
