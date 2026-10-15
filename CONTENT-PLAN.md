@@ -41,7 +41,7 @@ Filming runs ahead of posting on purpose so Jacob builds a bank first.
 | 2 | Mon Oct 19 | Mon Oct 27 |
 | 3 | Tue Oct 20 | Thu Oct 30 |
 | 4 | Thu Oct 22 | Mon Nov 2 |
-| 5 | Fri Oct 23 | Thu Nov 5 |
+| 5 | Fri Oct 17 | Thu Nov 5 |
 
 Wednesday Oct 21 is her day off. After post 2, one post every 3 days.
 
