@@ -37,10 +37,10 @@ Filming runs ahead of posting on purpose so Jacob builds a bank first.
 
 | # | Film by | Post on |
 |---|---|---|
-| 1 | Sun Nov 1 | Thu Nov 5 |
-| 2 | Mon Nov 2 | Thu Nov 12 |
+| 1 | Mon Nov 2 | Thu Nov 5 |
+| 2 | Tue Nov 3 | Thu Nov 12 |
 | 3 | Fri Nov 6 | Sun Nov 15 |
-| 4 | Sun Nov 8 | Wed Nov 18 |
+| 4 | Mon Nov 9 | Wed Nov 18 |
 | 5 | Wed Nov 4 | Sat Nov 21 |
 
 Numbered in posting order.
@@ -55,15 +55,15 @@ Numbered in posting order.
 
 Hashtags (keep to 5-8, local first): #fortcollins #fortcollinsfitness #nocomoms #pilatesinstructor #matpilates #pilatesformoms #coloradomoms #fortcollinspilates
 
-## Week 2 (film Nov 11 - Nov 17)
+## Week 2 (film Nov 11 - Nov 18)
 
 | # | Type | Title | Pillar | Film by | Post on | Caption draft |
 |---|---|---|---|---|---|---|
 | 1 | Talking head | Why I named it The Yo Method | Her | Wed Nov 11 | Tue Nov 24 | "People ask where the name came from. Here's the real answer." |
 | 2 | Reel | Stop doing crunches, do this | Teach | Thu Nov 12 | Fri Nov 27 | "Stop doing this. Do this instead. Your neck will thank you. Send it to someone who crunches." |
-| 3 | Reel | Come see my home studio | Show | Sat Nov 14 | Mon Nov 30 | "This is where it all happens. Mat, window, dog, and a door the boys keep opening." |
-| 4 | Reel | Working on something I can't talk about yet | Tease | Sun Nov 15 | Thu Dec 3 | "I signed something this week. That's all I can say for now." |
-| 5 | Photo | Home studio photo with the dog | Grid | Mon Nov 16 | Sun Dec 6 | "Studio assistant. Does not take corrections." (swap in the dog's name) |
+| 3 | Reel | Come see my home studio | Show | Mon Nov 16 | Mon Nov 30 | "This is where it all happens. Mat, window, dog, and a door the boys keep opening." |
+| 4 | Reel | Working on something I can't talk about yet | Tease | Tue Nov 17 | Thu Dec 3 | "I signed something this week. That's all I can say for now." |
+| 5 | Photo | Home studio photo with the dog | Grid | Wed Nov 18 | Sun Dec 6 | "Studio assistant. Does not take corrections." (swap in the dog's name) |
 
 Rejected for week 2: "Things my boys say about Pilates" (Jacob passed).
 
@@ -84,6 +84,7 @@ Jacob's standing ask: week 5 includes a Thanksgiving / thankful post, films of s
 
 ## Rules
 
+- No weekend filming. Film days are Monday through Friday only (Jacob, 2026-10-26).
 - Never post about church or Ryan. If a commenter brings it up, don't engage, don't delete unless abusive.
 - The show: tease only until she says it's public.
 - Students / clients in footage: she gets permission or shoots from behind.
