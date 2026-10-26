@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/app", "destination": "/dashboard/", "permanent": false },
+    { "source": "/film", "destination": "/dashboard/", "permanent": false }
+  ]
+}

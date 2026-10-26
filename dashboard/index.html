@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Yo Method · Dashboard</title>
+<meta name="description" content="Filming dashboard for The Yo Method Instagram. Yolanda films, Jacob posts.">
+<meta name="theme-color" content="#f6f1ea">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23b86a4f'/%3E%3Ctext x='32' y='42' font-size='30' text-anchor='middle' fill='%23f6f1ea' font-family='Georgia'%3EYo%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f1ea; --paper:#fffdf9; --ink:#2b2520; --muted:#6f655c;
+    --line:#e6ddd2; --accent:#b86a4f; --sage:#8a9a7b; --sage-soft:#e9eee3;
+    --done:#4f7a5a; --done-soft:#e3efe6; --warn:#c9a227; --warn-soft:#fbf3d6; --red:#b8463f; --red-soft:#f7e0dd;
+    --blue:#4f6d8a; --blue-soft:#e2eaf2;
+    --shadow:0 1px 2px rgba(43,37,32,.06),0 8px 24px rgba(43,37,32,.06); --r:16px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;font-size:16px;line-height:1.5;padding-bottom:48px}
+  a{color:var(--accent)}
+  .wrap{max-width:760px;margin:0 auto;padding:0 16px}
+  button{font:inherit}
+  input,textarea,select{font:inherit;color:var(--ink)}
+
+  /* stage banner */
+  .stage{display:flex;align-items:center;gap:12px;background:var(--ink);color:#fff;padding:12px 16px;border-radius:0 0 var(--r) var(--r)}
+  .light{width:18px;height:18px;border-radius:50%;flex:0 0 auto;box-shadow:0 0 0 3px rgba(255,255,255,.12)}
+  .light.yellow{background:#f2c641;box-shadow:0 0 0 3px rgba(242,198,65,.25),0 0 14px #f2c641}
+  .light.green{background:#4ad66d;box-shadow:0 0 0 3px rgba(74,214,109,.25),0 0 14px #4ad66d}
+  .light.red{background:#ef5350;box-shadow:0 0 0 3px rgba(239,83,80,.25),0 0 14px #ef5350}
+  .stage b{font-family:Fraunces,Georgia,serif;font-size:18px;letter-spacing:.02em}
+  .stage small{display:block;color:rgba(255,255,255,.7);font-size:13px;line-height:1.3}
+  .stage .pill{margin-left:auto;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;border-radius:999px;background:rgba(255,255,255,.12);white-space:nowrap}
+
+  header{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:22px 0 10px}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:30px;letter-spacing:-.01em;line-height:1.05;margin:0}
+  .brand span{color:var(--accent)}
+  .sub{color:var(--muted);margin:4px 0 0;font-size:14px}
+  .switch{display:flex;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:3px;flex:0 0 auto}
+  .switch button{border:0;background:none;padding:7px 12px;border-radius:999px;font-weight:600;font-size:14px;color:var(--muted);cursor:pointer}
+  .switch button.on{background:var(--ink);color:#fff}
+
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);margin:0 0 14px;box-shadow:var(--shadow);overflow:hidden}
+  .card.done{border-color:#c9dccd}
+  .card-head{display:flex;align-items:flex-start;gap:12px;padding:16px 16px 12px;cursor:pointer}
+  .num{flex:0 0 40px;height:40px;border-radius:12px;background:var(--accent);color:#fff;display:grid;place-items:center;font-family:Fraunces,Georgia,serif;font-size:20px;font-weight:600}
+  .card.s-filmed .num{background:var(--blue)}
+  .card.done .num{background:var(--done)}
+  .card-title{flex:1;min-width:0}
+  .card-title h3{margin:0;font-size:18px;font-weight:700;line-height:1.25}
+  .meta-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:5px;align-items:center}
+  .badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--sage);background:var(--sage-soft);padding:2px 8px;border-radius:6px}
+  .badge.date{color:var(--accent);background:#f6e6df}
+  .badge.late{color:var(--red);background:var(--red-soft)}
+  .badge.st{color:var(--blue);background:var(--blue-soft)}
+  .badge.ok{color:var(--done);background:var(--done-soft)}
+  .chev{flex:0 0 auto;color:var(--muted);transition:transform .2s;margin-top:8px}
+  .card.open .chev{transform:rotate(180deg)}
+  .card-body{display:none;padding:0 16px 16px}
+  .card.open .card-body{display:block}
+  .idea{margin:0 0 12px}
+  .spec{font-size:14px;color:var(--muted);background:var(--bg);border-radius:10px;padding:8px 12px;margin:0 0 14px}
+  h4{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:14px 0 6px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:22px;margin:22px 0 10px}
+  ol,ul{margin:0;padding-left:0;list-style:none}
+  .shots li{display:flex;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+  .shots li:first-child{border-top:0}
+  .shots li input{flex:0 0 22px;width:22px;height:22px;margin:1px 0 0;accent-color:var(--done)}
+  .shots li label{flex:1;cursor:pointer}
+  .shots li.checked label{color:var(--muted);text-decoration:line-through}
+  .say li{padding:6px 0 6px 18px;position:relative}
+  .say li::before{content:"“";position:absolute;left:0;top:2px;color:var(--accent);font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1}
+  .send{font-size:14px;background:var(--sage-soft);border-radius:10px;padding:10px 12px;margin-top:12px}
+  .actions{display:flex;gap:10px;padding:12px 16px 16px;border-top:1px solid var(--line);background:#fcfaf6;flex-wrap:wrap}
+  .btn{flex:1;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:12px;padding:12px;font-weight:700;font-size:15px;cursor:pointer;min-width:120px}
+  .btn.on{background:var(--done);border-color:var(--done);color:#fff}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  .btn.ghost{background:none;flex:0 0 auto;min-width:0;font-weight:600;color:var(--muted)}
+  .btn.danger{color:var(--red);border-color:#e8c4c1;flex:0 0 auto;min-width:0}
+  .btn:disabled{opacity:.5;cursor:not-allowed}
+  .empty{color:var(--muted);background:var(--paper);border:1px dashed var(--line);border-radius:var(--r);padding:18px;text-align:center;margin-bottom:14px}
+
+  /* calendar */
+  .cal{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:12px 12px 10px;margin-bottom:14px}
+  .cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+  .cal-head b{font-family:Fraunces,Georgia,serif;font-size:19px;font-weight:600}
+  .cal-head button{border:1px solid var(--line);background:#fff;border-radius:10px;width:36px;height:36px;cursor:pointer;font-size:18px;line-height:1}
+  .dow{display:grid;grid-template-columns:repeat(7,1fr);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:4px}
+  .grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+  .day{min-height:58px;border-radius:10px;background:var(--bg);padding:4px 3px;display:flex;flex-direction:column;gap:3px}
+  .day.out{opacity:.35}
+  .day.today{outline:2px solid var(--accent);outline-offset:-2px}
+  .day .d{font-size:12px;font-weight:600;color:var(--muted);text-align:center;line-height:1}
+  .day.today .d{color:var(--accent)}
+  .chip{border:0;border-radius:6px;font-size:12px;font-weight:700;padding:3px 0;cursor:pointer;color:#fff;background:var(--accent);line-height:1.1;width:100%}
+  .chip.s-filmed{background:var(--blue)}
+  .chip.s-sent,.chip.s-editing,.chip.s-scheduled,.chip.s-posted{background:var(--done)}
+  .chip.go{background:#fff;color:var(--ink);border:1px dashed var(--muted)}
+  .chip.go.s-posted{border-style:solid;border-color:var(--done);color:var(--done)}
+  .legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--muted);margin-top:8px}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+
+  .panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);margin:14px 0 0;box-shadow:var(--shadow);overflow:hidden}
+  .panel summary{list-style:none;cursor:pointer;padding:16px;font-weight:700;font-size:17px;display:flex;align-items:center;gap:10px}
+  .panel summary::-webkit-details-marker{display:none}
+  .panel summary .ic{width:34px;height:34px;border-radius:10px;background:var(--sage-soft);color:var(--sage);display:grid;place-items:center;flex:0 0 auto}
+  .panel summary .arrow{margin-left:auto;color:var(--muted);transition:transform .2s}
+  .panel[open] summary .arrow{transform:rotate(180deg)}
+  .panel-body{padding:0 16px 16px}
+  .basics li{padding:10px 0;border-top:1px solid var(--line)}
+  .basics li:first-child{border-top:0}
+  .basics b{display:block;margin-bottom:2px}
+  .basics p{margin:0;color:var(--muted);font-size:15px}
+  .steps li,.qs li{display:flex;gap:10px;padding:7px 0}
+  .steps li i,.qs li i{flex:0 0 24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;font-style:normal;font-size:13px;font-weight:700;display:grid;place-items:center}
+  .qs li i{background:var(--sage)}
+  .link-btn{display:inline-block;margin:6px 0 12px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:11px 16px;border-radius:12px}
+  .link-missing{display:inline-block;margin:6px 0 12px;color:var(--muted);font-size:14px;background:var(--bg);padding:9px 12px;border-radius:10px}
+
+  /* jacob */
+  .form{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+  .form .full{grid-column:1/-1}
+  .form label{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+  .form input,.form textarea,.form select{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px;background:#fff}
+  .form textarea{min-height:90px;resize:vertical}
+  .radios{display:flex;gap:8px}
+  .radios label{flex:1;display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;padding:10px;cursor:pointer;background:#fff;text-transform:none;font-size:15px;letter-spacing:0;color:var(--ink)}
+  .radios label.on{border-color:var(--ink);background:var(--bg)}
+  .queue-group{margin-bottom:6px}
+  .row{display:flex;align-items:center;gap:10px;padding:12px 16px;border-top:1px solid var(--line)}
+  .row:first-child{border-top:0}
+  .row .num{flex:0 0 32px;height:32px;font-size:16px;border-radius:9px}
+  .row .t{flex:1;min-width:0}
+  .row .t b{display:block;font-size:15px;line-height:1.25}
+  .row .t small{color:var(--muted);font-size:13px}
+  .row .acts{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+  .sm{border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px 10px;font-weight:600;font-size:13px;cursor:pointer;white-space:nowrap}
+  .sm.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .log li{font-size:13px;color:var(--muted);padding:5px 0;border-top:1px solid var(--line)}
+  .log li:first-child{border-top:0}
+  .log li b{color:var(--ink);font-weight:600}
+  .toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:999px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:9}
+  .toast.show{opacity:1}
+  .offline{display:none;font-size:12px;color:var(--red);background:var(--red-soft);padding:4px 10px;border-radius:999px;margin-top:6px}
+  body.offline .offline{display:inline-block}
+  .wksec{margin:0 0 14px}
+  .wksec summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;background:var(--ink);color:#fff;border-radius:14px;padding:12px 16px}
+  .wksec summary::-webkit-details-marker{display:none}
+  .wk-name{font-family:Fraunces,Georgia,serif;font-size:20px;font-weight:600}
+  .wk-meta{font-size:13px;color:rgba(255,255,255,.7);margin-left:auto;text-align:right;line-height:1.3}
+  .wksec summary .arrow{color:rgba(255,255,255,.7);transition:transform .2s}
+  .wksec[open] summary .arrow{transform:rotate(180deg)}
+  .wk-body{padding-top:12px}
+  footer{color:var(--muted);font-size:14px;text-align:center;padding:30px 0 0}
+  @media (min-width:600px){ .brand{font-size:36px} .day{min-height:70px} }
+  @media (max-width:420px){ .form{grid-template-columns:1fr} .switch button{padding:7px 10px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="stage" id="stage"></div>
+
+  <header>
+    <div>
+      <h1 class="brand">The <span>Yo</span> Method</h1>
+      <p class="sub" id="sub">Your filming dashboard. Film it, check it off, send it.</p>
+      <span class="offline">Offline: changes stay on this phone until the site is back</span>
+    </div>
+    <div class="switch" id="switch"><button data-v="yolanda">Yolanda</button><button data-v="jacob">Jacob</button></div>
+  </header>
+
+  <main id="main"></main>
+  <footer id="foot"></footer>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="seed.js"></script>
+<script>
+(function(){
+  // ---------- state + api ----------
+  const API = '/api/state';
+  const LS = 'yomethod-state-v2';
+  let S = null;            // shared state
+  let pin = '';
+  try { pin = sessionStorage.getItem('yo-pin') || ''; } catch(e){}
+  let view = (location.hash.replace('#','') === 'jacob' && pin) ? 'jacob' : 'yolanda';
+  if(location.hash && view!=='jacob'){ try{ history.replaceState(null,'',location.pathname); }catch(e){} }
+  let ui = { open: {}, cal: null, editing: null, calJ: null };
+  try { Object.assign(ui, JSON.parse(localStorage.getItem('yomethod-ui') || '{}')); } catch(e){}
+  function saveUi(){ try{ localStorage.setItem('yomethod-ui', JSON.stringify({open:ui.open})); }catch(e){} }
+
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+  function toast(m){ const t=document.getElementById('toast'); t.textContent=m; t.classList.add('show'); clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove('show'),2200); }
+
+  async function load(){
+    try {
+      const r = await fetch(API, {cache:'no-store'});
+      if(!r.ok) throw new Error(r.status);
+      S = await r.json();
+      document.body.classList.remove('offline');
+      try{ localStorage.setItem(LS, JSON.stringify(S)); }catch(e){}
+    } catch(e) {
+      document.body.classList.add('offline');
+      try { S = JSON.parse(localStorage.getItem(LS)) || null; } catch(err){ S=null; }
+      if(!S) S = JSON.parse(JSON.stringify(window.SEED));
+    }
+    render();
+  }
+
+  async function act(body){
+    if(document.body.classList.contains('offline')){ applyLocal(body); render(); return true; }
+    try{
+      const r = await fetch(API, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(Object.assign({pin}, body))});
+      const j = await r.json();
+      if(!r.ok){ toast(j.error==='pin' ? 'Jacob PIN needed' : ('Error: '+(j.error||r.status))); return false; }
+      S = j; try{ localStorage.setItem(LS, JSON.stringify(S)); }catch(e){}
+      render(); return true;
+    }catch(e){ toast('No connection. Saved on this phone.'); document.body.classList.add('offline'); applyLocal(body); render(); return true; }
+  }
+  // minimal local mirror of the server actions (offline only)
+  function applyLocal(b){
+    const p = S.posts.find(p=>p.id===b.id);
+    if(b.action==='setStatus' && p){ p.status=b.status; }
+    if(b.action==='toggleShot' && p){ p.shotsDone=p.shotsDone||{}; if(b.done) p.shotsDone[b.idx]=true; else delete p.shotsDone[b.idx]; }
+    if(b.action==='onboardingDone'){ S.onboarding.done=!!b.done; }
+    try{ localStorage.setItem(LS, JSON.stringify(S)); }catch(e){}
+  }
+
+  // ---------- dates ----------
+  const DOW = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function pd(s){ if(!s) return null; const [y,m,d]=s.split('-').map(Number); return new Date(y,m-1,d); }
+  function iso(d){ return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+  function today(){ const t=new Date(); return new Date(t.getFullYear(),t.getMonth(),t.getDate()); }
+  function fmt(s){ const d=pd(s); if(!d) return 'no date'; return DOW[(d.getDay()+6)%7]+', '+MON[d.getMonth()]+' '+d.getDate(); }
+  function isLate(s){ const d=pd(s); return d && d < today(); }
+  function fmtTs(s){ if(!s) return ''; const d=new Date(s); return MON[d.getMonth()]+' '+d.getDate()+' '+d.toLocaleTimeString([], {hour:'numeric',minute:'2-digit'}); }
+
+  const STATUS_LABEL = { todo:'To film', filmed:'Filmed', sent:'Sent to Jacob', editing:'Jacob is editing', scheduled:'Scheduled', posted:'Posted' };
+  const WITH_YOLANDA = s => s==='todo' || s==='filmed';
+
+  // ---------- stage ----------
+  function renderStage(){
+    const st = S.stage || {label:'Stage 2', light:'yellow', note:''};
+    const pill = st.light==='green' ? 'Full on' : st.light==='red' ? 'Paused' : 'Standby';
+    document.getElementById('stage').innerHTML = `<span class="light ${esc(st.light)}"></span><div><b>${esc(st.label)}</b><small>${esc(st.note)}</small></div><span class="pill">${pill}</span>`;
+  }
+
+  // ---------- calendar ----------
+  function renderCal(mode){
+    // mode 'film': chips on filmBy; 'post': chips on postOn. Both show the other as dashed.
+    const key = mode==='post' ? 'calJ' : 'cal';
+    if(!ui[key]){ const t=today(); ui[key] = {y:t.getFullYear(), m:t.getMonth()}; }
+    const {y,m} = ui[key];
+    const first = new Date(y,m,1); const startOff = (first.getDay()+6)%7;
+    const start = new Date(y,m,1-startOff);
+    const t = iso(today());
+    const byDay = {};
+    S.posts.forEach(p=>{
+      if(p.filmBy){ (byDay[p.filmBy]=byDay[p.filmBy]||[]).push({p, kind:'film'}); }
+      if(p.postOn){ (byDay[p.postOn]=byDay[p.postOn]||[]).push({p, kind:'post'}); }
+    });
+    let cells='';
+    for(let i=0;i<42;i++){
+      const d = new Date(start.getFullYear(), start.getMonth(), start.getDate()+i);
+      const k = iso(d);
+      const items = (byDay[k]||[]).filter(it => mode==='post' ? true : true);
+      const chips = items.sort((a,b)=> (a.kind===mode?-1:1)-(b.kind===mode?-1:1) || a.p.n-b.p.n).map(it=>{
+        const primary = it.kind===mode;
+        const cls = primary ? `chip s-${it.p.status}` : `chip go s-${it.p.status}`;
+        const label = it.kind==='film' ? (primary? it.p.n : '🎬'+it.p.n) : (primary ? it.p.n : '▶'+it.p.n);
+        return `<button class="${cls}" data-go="${esc(it.p.id)}" title="${esc(it.p.title)} · ${it.kind==='film'?'film by':'posts'} ${esc(fmt(k))}">${label}</button>`;
+      }).join('');
+      cells += `<div class="day ${d.getMonth()!==m?'out':''} ${k===t?'today':''}"><div class="d">${d.getDate()}</div>${chips}</div>`;
+      if(i>=34 && d.getMonth()!==m && (d.getDay()+6)%7===6) break;
+    }
+    const legend = mode==='post'
+      ? `<span><i style="background:var(--accent)"></i>Post day (to film)</span><span><i style="background:var(--blue)"></i>filmed</span><span><i style="background:var(--done)"></i>sent / done</span><span><i style="background:#fff;border:1px dashed var(--muted)"></i>🎬 = her film day</span>`
+      : `<span><i style="background:var(--accent)"></i>Film by this day</span><span><i style="background:var(--blue)"></i>filmed</span><span><i style="background:var(--done)"></i>sent</span><span><i style="background:#fff;border:1px dashed var(--muted)"></i>▶ = goes live</span>`;
+    return `<div class="cal"><div class="cal-head"><button data-cal="${key}" data-dir="-1">‹</button><b>${MON[m]} ${y}</b><button data-cal="${key}" data-dir="1">›</button></div>
+      <div class="dow">${DOW.map(d=>`<span>${d}</span>`).join('')}</div><div class="grid">${cells}</div><div class="legend">${legend}</div></div>`;
+  }
+
+  // ---------- yolanda ----------
+  function postCard(p){
+    const open = (p.id in ui.open) ? !!ui.open[p.id] : (WITH_YOLANDA(p.status) && p.id===firstMine());
+    const mine = WITH_YOLANDA(p.status);
+    const shots = (p.shots||[]).map((s,i)=>{ const on = !!(p.shotsDone||{})[i];
+      return `<li class="${on?'checked':''}"><input type="checkbox" id="sh-${esc(p.id)}-${i}" data-shot="${esc(p.id)}" data-idx="${i}" ${on?'checked':''} ${mine?'':'disabled'}><label for="sh-${esc(p.id)}-${i}">${esc(s)}</label></li>`; }).join('');
+    const script = (p.script||[]).map(s=>`<li>${esc(s)}</li>`).join('');
+    const late = p.status==='todo' && isLate(p.filmBy);
+    const statusBadge = mine ? '' : `<span class="badge ok">${esc(STATUS_LABEL[p.status]||p.status)}</span>`;
+    const dateBadge = p.filmBy ? `<span class="badge date ${late?'late':''}">${late?'Was due ':'Film by '}${esc(fmt(p.filmBy))}</span>` : '';
+    const actions = mine ? `
+      <div class="actions">
+        <button class="btn ${p.status==='filmed'?'on':''}" data-status="${esc(p.id)}" data-to="${p.status==='filmed'?'todo':'filmed'}">${p.status==='filmed'?'✓ Filmed':'Filmed'}</button>
+        <button class="btn primary" data-status="${esc(p.id)}" data-to="sent">Sent to Jacob →</button>
+      </div>` : `<div class="actions"><span style="color:var(--muted);font-size:14px;padding:4px 0">${esc(STATUS_LABEL[p.status])}${p.sentAt?' · sent '+esc(fmtTs(p.sentAt)):''}${p.postOn?' · goes live '+esc(fmt(p.postOn)):''}</span></div>`;
+    return `<article class="card ${open?'open':''} s-${esc(p.status)} ${mine?'':'done'}" id="post-${esc(p.id)}">
+      <div class="card-head" data-toggle="${esc(p.id)}">
+        <div class="num">${esc(p.n)}</div>
+        <div class="card-title"><h3>${esc(p.title)}</h3><div class="meta-row"><span class="badge">${esc(p.type)}</span>${dateBadge}${statusBadge}</div></div>
+        <div class="chev">▾</div>
+      </div>
+      <div class="card-body">
+        ${p.idea?`<p class="idea">${esc(p.idea)}</p>`:''}
+        ${p.length?`<div class="spec">${esc(p.length)}</div>`:''}
+        ${shots?`<h4>Film this</h4><ol class="shots">${shots}</ol>`:''}
+        ${script?`<h4>Suggested script</h4><ul class="say">${script}</ul>`:''}
+        ${p.send?`<div class="send"><b>Send:</b> ${esc(p.send)}</div>`:''}
+      </div>${actions}</article>`;
+  }
+
+  function firstMine(){ const m=S.posts.filter(p=>WITH_YOLANDA(p.status)).sort(byNum); return m.length?m[0].id:null; }
+  function byFilm(a,b){ const x=a.filmBy||'9', y=b.filmBy||'9'; return x>y?1:x<y?-1:(a.n-b.n); }
+  function wk(p){ const m=String(p.week||'').match(/d+/); return m?+m[0]:999; }
+  function byNum(a,b){ return (wk(a)-wk(b)) || (a.n-b.n) || ((a.filmBy||'9')>(b.filmBy||'9')?1:-1); }
+  function grouped(list){
+    const weeks=[...new Set(S.posts.map(p=>p.week||''))].sort((a,b)=>wk({week:a})-wk({week:b}));
+    if(weeks.length<2) return list.map(postCard).join('');
+    return weeks.map((w,i)=>{
+      const all=S.posts.filter(p=>(p.week||'')===w); const mine=list.filter(p=>(p.week||'')===w);
+      if(!all.length) return '';
+      const done=all.filter(p=>!WITH_YOLANDA(p.status)).length;
+      const dates=all.map(p=>p.filmBy).filter(Boolean).sort();
+      const short=s=>fmt(s).replace(/^\w+, /,'');
+      const range=dates.length?(short(dates[0])+' - '+short(dates[dates.length-1])):'';
+      const key='week:'+w;
+      const earlierOpen=weeks.slice(0,i).some(x=>list.some(p=>(p.week||'')===x));
+      const open=(key in ui.open)?!!ui.open[key]:!earlierOpen;
+      return `<details class="wksec" data-open="${esc(key)}" ${open?'open':''}><summary><span class="wk-name">${esc(w||'Other')}</span><span class="wk-meta">${esc(range)}<br>${done} of ${all.length} sent</span><span class="arrow">▾</span></summary><div class="wk-body">${mine.length?mine.map(postCard).join(''):'<div class="empty">All sent. Nice.</div>'}</div></details>`;
+    }).join('');
+  }
+  function renderYolanda(){
+    const c = S.config||{};
+    const mine = S.posts.filter(p=>WITH_YOLANDA(p.status)).sort(byNum);
+    const sent = S.posts.filter(p=>!WITH_YOLANDA(p.status)).sort((a,b)=>(b.sentAt||'')>(a.sentAt||'')?1:-1);
+    const filmed = S.posts.filter(p=>p.status!=='todo').length;
+    const link = c.deliveryLink ? `<a class="link-btn" href="${esc(c.deliveryLink)}" target="_blank" rel="noopener">Open the ${esc(c.deliveryMethod||'shared')} folder</a>` : `<span class="link-missing">${esc(c.deliveryMethod||'Shared')} folder link coming from ${esc(c.managerName||'Jacob')}. Until then, AirDrop or text the files.</span>`;
+    const ob = S.onboarding||{questions:[]};
+    return `
+      ${renderCal('film')}
+      <h2>To film <span style="color:var(--muted);font-size:15px;font-weight:500">· ${filmed} of ${S.posts.length} done</span></h2>
+      ${mine.length ? grouped(mine) : `<div class="empty">Nothing on your list. ${esc(c.managerName||'Jacob')} will add the next batch.</div>`}
+      ${sent.length ? `<details class="panel" ${ui.open.__sent?'open':''} data-open="__sent"><summary><span class="ic">✓</span> Sent to ${esc(c.managerName||'Jacob')} (${sent.length}) <span class="arrow">▾</span></summary><div class="panel-body">${sent.map(postCard).join('')}</div></details>` : ''}
+      <details class="panel" ${ui.open.__send?'open':''} data-open="__send"><summary><span class="ic">↑</span> How to send footage <span class="arrow">▾</span></summary><div class="panel-body">${link}<ol class="steps">${(S.delivery||[]).map((s,i)=>`<li><i>${i+1}</i><span>${esc(s)}</span></li>`).join('')}</ol></div></details>
+      <details class="panel" ${ui.open.__film?'open':''} data-open="__film"><summary><span class="ic">▶</span> How to film (read once) <span class="arrow">▾</span></summary><div class="panel-body"><ul class="basics">${(S.basics||[]).map(b=>`<li><b>${esc(b.h)}</b><p>${esc(b.p)}</p></li>`).join('')}</ul></div></details>
+      <details class="panel" ${ui.open.__memo?'open':''} data-open="__memo"><summary><span class="ic">●</span> ${esc(ob.title||'One time: voice memo')} ${ob.done?'<span class="badge ok">done</span>':''}<span class="arrow">▾</span></summary><div class="panel-body"><p style="margin:0 0 10px">${esc(ob.why||'')}</p><ol class="qs">${(ob.questions||[]).map((q,i)=>`<li><i>${i+1}</i><span>${esc(q)}</span></li>`).join('')}</ol><div class="actions" style="padding:14px 0 0;border:0;background:none"><button class="btn ${ob.done?'on':''}" id="memoBtn">${ob.done?'✓ Voice memo sent':'Voice memo sent'}</button></div></div></details>`;
+  }
+
+  // ---------- jacob ----------
+  function queueRow(p){
+    const next = {sent:'editing', editing:'scheduled', scheduled:'posted'}[p.status];
+    const nextLabel = {sent:'Start editing', editing:'Scheduled', scheduled:'Posted ✓'}[p.status];
+    const back = {editing:'sent', scheduled:'editing', posted:'scheduled', filmed:'todo', sent:'filmed'}[p.status];
+    return `<div class="row"><div class="num ${p.status==='posted'?'':''}" style="background:${p.status==='posted'?'var(--done)':p.status==='todo'?'var(--accent)':p.status==='filmed'?'var(--blue)':'var(--ink)'}">${esc(p.n)}</div>
+      <div class="t"><b>${esc(p.title)}</b><small>${esc(p.type)} · ${esc(p.week||'')} ${p.sentAt?'· sent '+esc(fmtTs(p.sentAt)):''} ${p.postOn?'· post '+esc(fmt(p.postOn)):''}</small></div>
+      <div class="acts">${back?`<button class="sm" data-jstatus="${esc(p.id)}" data-to="${back}">↩</button>`:''}${next?`<button class="sm primary" data-jstatus="${esc(p.id)}" data-to="${next}">${nextLabel}</button>`:''}<button class="sm" data-edit="${esc(p.id)}">Edit</button></div></div>`;
+  }
+  function postForm(p){
+    p = p || {week:'Week 1', n:(S.posts.length+1), type:'Reel', title:'', filmBy:'', postOn:'', idea:'', length:'', script:[], shots:[], send:'', caption:'', notes:''};
+    const v = k => esc(p[k]==null?'':p[k]);
+    const lines = k => esc((p[k]||[]).join('\n'));
+    return `<form class="form" id="postForm" data-id="${esc(p.id||'')}">
+      <div><label>Week</label><input name="week" value="${v('week')}"></div>
+      <div><label>Number</label><input name="n" type="number" value="${v('n')}"></div>
+      <div><label>Type</label><select name="type">${['Reel','Photo carousel','Story','Talking head','Other'].map(t=>`<option ${p.type===t?'selected':''}>${t}</option>`).join('')}</select></div>
+      <div><label>Title</label><input name="title" value="${v('title')}" required></div>
+      <div><label>Film by</label><input name="filmBy" type="date" value="${v('filmBy')}"></div>
+      <div><label>Post on</label><input name="postOn" type="date" value="${v('postOn')}"></div>
+      <div class="full"><label>The idea (she sees this)</label><textarea name="idea">${v('idea')}</textarea></div>
+      <div class="full"><label>Length / spec</label><input name="length" value="${v('length')}"></div>
+      <div class="full"><label>Film this (one shot per line)</label><textarea name="shots">${lines('shots')}</textarea></div>
+      <div class="full"><label>Suggested script (one line per point)</label><textarea name="script">${lines('script')}</textarea></div>
+      <div class="full"><label>What to send</label><input name="send" value="${v('send')}"></div>
+      <div class="full"><label>Caption draft (Jacob only)</label><textarea name="caption" style="min-height:60px">${v('caption')}</textarea></div>
+      <div class="full"><label>Notes (Jacob only)</label><input name="notes" value="${v('notes')}"></div>
+      <div class="full actions" style="padding:4px 0 0;border:0;background:none">
+        <button class="btn primary" type="submit">${p.id?'Save changes':'Add post'}</button>
+        ${p.id?`<button class="btn" type="button" data-dup="${esc(p.id)}">Duplicate</button><button class="btn danger" type="button" data-del="${esc(p.id)}">Delete</button>`:''}
+        <button class="btn ghost" type="button" id="cancelEdit">Cancel</button>
+      </div></form>`;
+  }
+  function renderJacob(){
+    const st = S.stage||{}; const c = S.config||{};
+    const groups = [['sent','Sent by Yolanda, needs editing'],['editing','Editing'],['scheduled','Scheduled'],['posted','Posted']];
+    const withHer = S.posts.filter(p=>WITH_YOLANDA(p.status));
+    const editing = ui.editing;
+    const formHtml = editing==null ? '' : `<div class="card" id="editCard"><div class="card-body" style="padding-top:16px"><h4 style="margin-top:0">${editing==='new'?'New post':'Edit post'}</h4>${postForm(editing==='new'?null:S.posts.find(p=>p.id===editing))}</div></div>`;
+    return `
+      <div class="card"><div class="card-body" style="padding-top:16px">
+        <h4 style="margin-top:0">Stage light</h4>
+        <form class="form" id="stageForm">
+          <div class="full radios">${['yellow','green','red'].map(l=>`<label class="${st.light===l?'on':''}"><input type="radio" name="light" value="${l}" ${st.light===l?'checked':''} style="accent-color:var(--ink)"><span class="light ${l}" style="width:14px;height:14px"></span>${l==='yellow'?'Standby':l==='green'?'Full on':'Paused'}</label>`).join('')}</div>
+          <div><label>Label</label><input name="label" value="${esc(st.label||'')}"></div>
+          <div><label>Note (she sees this)</label><input name="note" value="${esc(st.note||'')}"></div>
+          <div class="full"><button class="btn primary" type="submit" style="width:auto">Save stage</button></div>
+        </form></div></div>
+
+      <h2>Queue</h2>
+      ${groups.map(([s,label])=>{ const ps=S.posts.filter(p=>p.status===s).sort((a,b)=>{const x=a.postOn||'9',y=b.postOn||'9';return x>y?1:x<y?-1:(a.n-b.n)}); return ps.length?`<div class="card queue-group"><h4 style="margin:12px 16px 4px">${label} (${ps.length})</h4>${ps.map(queueRow).join('')}</div>`:''; }).join('') || '<div class="empty">Nothing sent yet. When Yolanda taps Sent, it lands here.</div>'}
+
+      <h2>Posting calendar</h2>
+      ${renderCal('post')}
+
+      <h2>With Yolanda (${withHer.length}) <button class="sm primary" id="newPost" style="float:right">+ New post</button></h2>
+      ${formHtml}
+      ${withHer.length?`<div class="card">${withHer.sort(byNum).map(queueRow).join('')}</div>`:'<div class="empty">Her list is empty. Add posts above.</div>'}
+
+      <details class="panel" data-open="__settings" ${ui.open.__settings?'open':''}><summary><span class="ic">⚙</span> Settings <span class="arrow">▾</span></summary><div class="panel-body">
+        <form class="form" id="cfgForm">
+          <div><label>Delivery method</label><input name="deliveryMethod" value="${esc(c.deliveryMethod||'')}"></div>
+          <div><label>Folder link</label><input name="deliveryLink" value="${esc(c.deliveryLink||'')}" placeholder="https://drive.google.com/..."></div>
+          <div class="full"><label>Footer line (she sees this)</label><input name="footer" value="${esc(c.footer||'')}"></div>
+          <div class="full"><button class="btn primary" type="submit" style="width:auto">Save settings</button> <button class="btn danger" type="button" id="resetBtn">Reset everything to seed</button></div>
+        </form></div></details>
+
+      <details class="panel" data-open="__log" ${ui.open.__log?'open':''}><summary><span class="ic">≡</span> Activity <span class="arrow">▾</span></summary><div class="panel-body"><ul class="log">${(S.log||[]).slice(0,40).map(l=>`<li><b>${esc(l.who)}</b> · ${esc(fmtTs(l.at))} · ${esc(l.text)}</li>`).join('')||'<li>Nothing yet.</li>'}</ul></div></details>`;
+  }
+
+  // ---------- render + events ----------
+  function render(){
+    if(!S) return;
+    renderStage();
+    document.querySelectorAll('#switch button').forEach(b=>b.classList.toggle('on', b.dataset.v===view));
+    document.getElementById('sub').textContent = view==='jacob' ? 'Jacob side. Queue, calendar, and what she sees.' : 'Your filming dashboard. Film it, check it off, send it.';
+    document.getElementById('main').innerHTML = view==='jacob' ? renderJacob() : renderYolanda();
+    document.getElementById('foot').textContent = (S.config||{}).footer || '';
+  }
+
+  document.getElementById('switch').onclick = async (e)=>{
+    const b = e.target.closest('button'); if(!b) return;
+    if(b.dataset.v==='jacob'){
+      if(!pin){ const p = prompt('Jacob PIN'); if(!p) return; pin=p; }
+      const r = await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'checkPin',pin})}).then(r=>r.json()).catch(()=>({ok:false}));
+      if(!r.ok){ pin=''; toast('Wrong PIN'); return; }
+      try{ sessionStorage.setItem('yo-pin',pin); }catch(e){}
+    }
+    view = b.dataset.v; location.hash = view==='jacob'?'jacob':''; render();
+  };
+
+  document.getElementById('main').addEventListener('click', async (e)=>{
+    const t = e.target;
+    const tog = t.closest('[data-toggle]'); if(tog){ const id=tog.dataset.toggle; ui.open[id]=!ui.open[id]; saveUi(); tog.closest('.card').classList.toggle('open', ui.open[id]); return; }
+    const cal = t.closest('[data-cal]'); if(cal){ const k=cal.dataset.cal; let {y,m}=ui[k]; m+= +cal.dataset.dir; if(m<0){m=11;y--;} if(m>11){m=0;y++;} ui[k]={y,m}; render(); return; }
+    const go = t.closest('[data-go]'); if(go){ const id=go.dataset.go;
+      if(view==='jacob'){ ui.editing=id; render(); document.getElementById('editCard')?.scrollIntoView({behavior:'smooth',block:'start'}); return; }
+      const sentPanel = document.querySelector('[data-open="__sent"]'); const p=S.posts.find(p=>p.id===id);
+      if(p && !WITH_YOLANDA(p.status)) ui.open.__sent=true;
+      ui.open[id]=true; saveUi(); render();
+      document.getElementById('post-'+id)?.scrollIntoView({behavior:'smooth',block:'start'}); return; }
+    const st = t.closest('[data-status]'); if(st){ const to=st.dataset.to;
+      if(to==='sent' && !confirm('Everything for this post is uploaded? It moves to Jacob\'s list.')) return;
+      await act({action:'setStatus', id:st.dataset.status, status:to}); if(to==='sent') toast('Sent to Jacob'); return; }
+    const js = t.closest('[data-jstatus]'); if(js){ await act({action:'setStatus', id:js.dataset.jstatus, status:js.dataset.to}); return; }
+    const ed = t.closest('[data-edit]'); if(ed){ ui.editing=ed.dataset.edit; render(); document.getElementById('editCard')?.scrollIntoView({behavior:'smooth',block:'start'}); return; }
+    if(t.id==='newPost'){ ui.editing='new'; render(); document.getElementById('editCard')?.scrollIntoView({behavior:'smooth',block:'start'}); return; }
+    if(t.id==='cancelEdit'){ ui.editing=null; render(); return; }
+    const del = t.closest('[data-del]'); if(del){ if(confirm('Delete this post for good?')){ ui.editing=null; await act({action:'deletePost', id:del.dataset.del}); } return; }
+    const dup = t.closest('[data-dup]'); if(dup){ const p=S.posts.find(p=>p.id===dup.dataset.dup); if(!p) return; const c=JSON.parse(JSON.stringify(p)); delete c.id; c.title=p.title+' (copy)'; c.n=S.posts.length+1; c.status='todo'; c.shotsDone={}; delete c.sentAt; delete c.history; if(await act({action:'upsertPost', post:c})){ toast('Duplicated'); } return; }
+    if(t.id==='memoBtn'){ await act({action:'onboardingDone', done:!(S.onboarding||{}).done}); return; }
+    if(t.id==='resetBtn'){ if(confirm('Reset EVERYTHING back to the seed file? This wipes all progress.')) await act({action:'reset'}); return; }
+  });
+
+  document.getElementById('main').addEventListener('change', async (e)=>{
+    const c = e.target;
+    if(c.dataset.shot){ await act({action:'toggleShot', id:c.dataset.shot, idx:+c.dataset.idx, done:c.checked}); return; }
+    if(c.name==='light'){ c.closest('.radios').querySelectorAll('label').forEach(l=>l.classList.toggle('on', l.contains(c))); }
+  });
+  document.getElementById('main').addEventListener('toggle', (e)=>{ const d=e.target; if(d.dataset && d.dataset.open){ ui.open[d.dataset.open]=d.open; saveUi(); } }, true);
+
+  document.getElementById('main').addEventListener('submit', async (e)=>{
+    e.preventDefault(); const f=e.target; const fd=new FormData(f); const o={}; fd.forEach((v,k)=>o[k]=v);
+    if(f.id==='stageForm'){ if(await act({action:'setStage', light:o.light, label:o.label, note:o.note})) toast('Stage saved'); }
+    if(f.id==='cfgForm'){ if(await act({action:'setConfig', config:o})) toast('Settings saved'); }
+    if(f.id==='postForm'){ if(f.dataset.id) o.id=f.dataset.id; if(await act({action:'upsertPost', post:o})){ ui.editing=null; render(); toast('Saved'); } }
+  });
+
+  // keep fresh
+  setInterval(()=>{ if(!document.hidden) load(); }, 45000);
+  document.addEventListener('visibilitychange', ()=>{ if(!document.hidden) load(); });
+  window.addEventListener('hashchange', ()=>{ const v = location.hash==='#jacob'?'jacob':'yolanda'; if(v!==view && (v==='yolanda' || pin)){ view=v; render(); } });
+  load();
+})();
+</script>
+</body>
+</html>
