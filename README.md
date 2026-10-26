@@ -2,9 +2,11 @@
 
 Social media system for Yolanda Ulibarri / The Yo Method (Pilates, Fort Collins CO). Instagram: @yolandbrimhallulibarri. Managed by Jacob.
 
-**Live dashboard (send this link to Yolanda):** https://theyomethod.vercel.app/
+**Public site:** https://theyomethod.vercel.app/
 
-**Jacob side:** https://theyomethod.vercel.app/#jacob (tap "Jacob" at the top, enter the PIN)
+**Live dashboard (send this link to Yolanda):** https://theyomethod.vercel.app/dashboard/
+
+**Jacob side:** https://theyomethod.vercel.app/dashboard/#jacob (tap "Jacob" at the top, enter the PIN)
 
 ## How it works
 
@@ -31,7 +33,9 @@ Both sides auto-refresh every 45 seconds and whenever the tab comes back into fo
 
 | File | What |
 |---|---|
-| `index.html` | The whole dashboard (both views). Vanilla JS, no build. |
+| `index.html` | Public Pilates site. Pricing, photos, and the booking link are all set in the `SITE` block at the bottom. |
+| `dashboard/index.html` | The whole dashboard (both views). Vanilla JS, no build. |
+| `img/` | Logo files (flat, metallic, on cream). Drop photos here. |
 | `api/state.js` | Serverless API. One JSON document in a private Vercel Blob store. Jacob-only actions are PIN-gated. |
 | `seed.js` | Initial content (week 1 posts, filming basics, delivery steps, voice-memo questions). Used once when the database is empty, and as the offline fallback. |
 | `BIO.md` | Instagram bio options + short/long bios. |

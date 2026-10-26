@@ -92,6 +92,7 @@ Jacob's standing ask: week 5 includes a Thanksgiving / thankful post, films of s
 
 ## Links
 
-- Live dashboard: https://theyomethod.vercel.app/ (Jacob side: tap "Jacob", enter PIN)
+- Live dashboard: https://theyomethod.vercel.app/dashboard/ (Jacob side: tap "Jacob", enter PIN)
+- Public site: https://theyomethod.vercel.app/
 - Repo: https://github.com/bigdawgelitediesel/THEYOMETHOD
 - Instagram: @yolandbrimhallulibarri
